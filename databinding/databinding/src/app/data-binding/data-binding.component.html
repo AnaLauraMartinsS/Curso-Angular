@@ -1,5 +1,6 @@
 <section>
-    <article>
+     <article>
+        <!-- DATA BINDING / INTERPOLAÇÃO -->
         <h1>Data Binding/ Interpolação </h1>
         <p>String renderizada com interpolação: <a href="">{{ url }}</a></p>
         <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
@@ -8,16 +9,22 @@
     </article>
     <hr>
     <article>
-        <h1>Propertie Binding</h1>
+        <!-- PROPERTY BINDING -->
+        <h1>PropertiY Binding</h1>
         <img src="{{urlImagem}}">
     </article>
     <hr>
-    <article>
+    <article> 
+        
+        <!-- CLASS E STYLE BINDING -->
+        <br><br>
         <h2>Class e Style Binding</h2>
-        <div>
+
+        <!--Combo box (caixa de seleção para alerta, erro, perigo e info)-->
+        <div> 
             Selecione uma classe:
             <select #classe (change)="0"> <!--select (um tipo de input) - 
-            #classe (definição de ID) - -->
+            #classe (definição de ID) -->
                 <option value="alert-success">Sucesso</option>
                 <option value="alert-danger">Perigo</option>
                 <option value="alert-warning">Alerta</option>
@@ -52,4 +59,24 @@
         </div>
 
     </article>
+
+<hr>
+    <br><br><br>
 </section>
+<!--Teste de combo box para vê se estou entendendo-->
+<h2>Selelção de combo box:</h2>
+<div class="teste">
+    <p>Selecione um valor</p>
+    <select #id (change)="0" ><!-- um tipo de input (select) classe (definição de ID e é uma váriavel local dentro do HTML)-->
+        <option value="1">1</option> <!-- option (um tipo de opção) - value (estou dando algum valor a ele)-->
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+
+    <div class="alert">1</div>
+    <div class="alert">2</div>
+    <div class="alert">3</div>
+    <div class="alert">4</div>
+    
+</div>
