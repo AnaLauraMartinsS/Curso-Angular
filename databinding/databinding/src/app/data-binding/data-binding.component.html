@@ -1,0 +1,56 @@
+<section>
+    <article>
+        <h1>Data Binding/ Interpolação </h1>
+        <p>String renderizada com interpolação: <a href="">{{ url }}</a></p>
+        <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+        <p>Resultado de 1 + 1 não é: {{1 + 1 + getValor()}}</p>
+        <p>Curso Angular: {{cursoAngular && getCurtirCurso()}}</p>
+    </article>
+    <hr>
+    <article>
+        <h1>Propertie Binding</h1>
+        <img [src]="urlImagem">
+        <img src="{{urlImagem}}">
+    </article>
+    <hr>
+    <article>
+        <h2>Class e Style Binding</h2>
+        <div>
+            Selecione uma classe:
+            <select #classe (change)="0"> <!--select (um tipo de input) - 
+            #classe (definição de ID) - -->
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-danger">Perigo</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-info">Info</option>
+            </select>
+            <br><br>
+
+            <div class="alert {{classe.value}}">
+                Texto colorido conforme o combobox escolhido.
+            </div>
+
+            <div class="alert"
+               [class.alert-success]="classe.value == 'alert-success'" >
+                SUCESSO
+              </div>
+
+              <div class="alert"
+              [class.alert-danger]="classe.value == 'alert-danger'" >
+               PERIGO
+             </div>
+
+             <div class="alert" 
+             [class.alert-warning]="classe.value == 'alert-warning'" >
+                CUIDADO
+            </div>
+
+            <div class="alert"
+            [class.alert-info]="classe.value == 'alert-info'" >
+               INFO
+           </div>
+
+        </div>
+
+    </article>
+</section>
